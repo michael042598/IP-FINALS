@@ -68,7 +68,7 @@ public class Monster{
 								e.printStackTrace();
 							}
 
-					        final compPass.repaint();
+					        compPass.repaint();
 					        Thread.sleep(100);
 						} catch (InterruptedException e) {
 							e.printStackTrace();
@@ -76,7 +76,7 @@ public class Monster{
 					}
 
 					if(life<=0){
-						die(final compPass);
+						die(compPass);
 					}
 				}
 			}
@@ -115,7 +115,7 @@ public class Monster{
 							catch(IOException e){
 								e.printStackTrace();
 							}
-					        final compPass.repaint();
+					        compPass.repaint();
 					        Thread.sleep(100);
 						} catch (InterruptedException e) {
 							e.printStackTrace();
@@ -123,7 +123,7 @@ public class Monster{
 					}
 
 					alive = false;
-					final compPass.checkDeath();
+					compPass.checkDeath();
 				}
 			});
 			monThread.start();

@@ -12,7 +12,7 @@ public class Draw extends JComponent{
 
 	private BufferedImage image;
 	private BufferedImage backgroundImage;
-	public URL resource = getClass().getResource("spritesheet-demo.png");
+	public URL resource = getClass().getResource("stance0.png");
 
 	// circle's position
 	public int x = 300;
@@ -77,27 +77,63 @@ public class Draw extends JComponent{
 	}
 
 	public void reloadImage(){
+		public int Direction;
 		state++;
-
-		if(state == 0){
-			resource = getClass().getResource("spritesheet-demo.png");
+		
+		if(KeyEvent LEFT){
+			else if(state == 0){
+				resource = getClass().getResource("dash0R.png");
+			}
+			else if(state == 1){
+				resource = getClass().getResource("dash1R.png");
+			}
+			else if(state == 2){
+				resource = getClass().getResource("dash2R.png");
+			}
+			else if(state == 3){
+				resource = getClass().getResource("dash3R.png");
+			}
+			else if(state == 4){
+				resource = getClass().getResource("dash4R.png");
+			}
+			else if(state == 5){
+				resource = getClass().getResource("dash5R.png");
+			}
+			else if(state == 6){
+				resource = getClass().getResource("dash6R.png");
+			}
+			else if(state == 7){
+				resource = getClass().getResource("dash7R.png");
+			}
 		}
-		else if(state == 1){
-			resource = getClass().getResource("run1.png");
+		
+		else (KeyEvent RIGHT){
+			else if(state == 0){
+				resource = getClass().getResource("dash0.png");
+			}
+			else if(state == 1){
+				resource = getClass().getResource("dash1.png");
+			}
+			else if(state == 2){
+				resource = getClass().getResource("dash2.png");
+			}
+			else if(state == 3){
+				resource = getClass().getResource("dash3.png");
+			}
+			else if(state == 4){
+				resource = getClass().getResource("dash4.png");
+			}
+			else if(state == 5){
+				resource = getClass().getResource("dash5.png");
+			}
+			else if(state == 6){
+				resource = getClass().getResource("dash6.png");
+			}
+			else if(state == 7){
+				resource = getClass().getResource("dash7.png");
+			}
 		}
-		else if(state == 2){
-			resource = getClass().getResource("run2.png");
-		}
-		else if(state == 3){
-			resource = getClass().getResource("run3.png");
-		}
-		else if(state == 4){
-			resource = getClass().getResource("run4.png");
-		}
-		else if(state == 5){
-			resource = getClass().getResource("run5.png");
-			state = 0;
-		}
+		state = 0;
 
 		try{
 			image = ImageIO.read(resource);
@@ -113,7 +149,7 @@ public class Draw extends JComponent{
 				for(int ctr = 0; ctr < 5; ctr++){
 					try {
 						if(ctr==4){
-							resource = getClass().getResource("spritesheet-demo.png");
+							resource = getClass().getResource("stance0.png");
 						}
 						else{
 							resource = getClass().getResource("attack"+ctr+".png");
